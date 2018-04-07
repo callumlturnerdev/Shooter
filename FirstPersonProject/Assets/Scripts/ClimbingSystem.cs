@@ -22,12 +22,17 @@ public class ClimbingSystem : MonoBehaviour {
 	private float hitdist;
 	[SerializeField]
 	private bool currentlyClimbing = false;
+
+	Quaternion normalRot;
+	Transform climbingRot;
 	// Use this for initialization
 	void Start () {
 	//	ccontrol = GetComponent<CharacterController>();
 		rigidbody = GetComponent<Rigidbody>();
 		fpsInput = GetComponent<FPSInput>();
 		liner = GetComponent<LineRenderer>();
+		normalRot = transform.rotation;
+		
 	}
 	
 	// Update is called once per frame
@@ -106,8 +111,11 @@ public class ClimbingSystem : MonoBehaviour {
 	{
 		
 		Debug.Log(transform.rotation.y);
-		transform.eulerAngles = new Vector3(transform.eulerAngles.x - 90, transform.eulerAngles.y, transform.eulerAngles.z);
-		
+		//transform.eulerAngles = new Vector3(transform.eulerAngles.x - 90, transform.eulerAngles.y, transform.eulerAngles.z);
+		if(climbingRot)
+		{
+		transform.rotation = climbingRot.rotation;
+		}
 		Debug.Log(transform.rotation.y);
 		fpsInput.SetGravity(0);
 		currentlyClimbing = true;

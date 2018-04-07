@@ -33,12 +33,8 @@ public class FPSInput : MonoBehaviour {
                 {
                     moveDirection.y = jumpspeed;
                 }
-            
-        if(climbSystem.isClimbing())
-        {
-            transform.up *= -gravity *Time.deltaTime;
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
+        
+     moveDirection.y -= gravity * Time.deltaTime;
         moveDirection *= Time.deltaTime;
         charControl.Move(moveDirection);
 	}

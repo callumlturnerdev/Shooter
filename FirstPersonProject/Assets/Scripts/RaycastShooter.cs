@@ -23,14 +23,25 @@ public class RaycastShooter : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             Vector3 point = new Vector3(cam.pixelWidth / 2, cam.pixelHeight / 2, 0);
             Ray ray = cam.ScreenPointToRay(point);
             RaycastHit hit;
+           
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject hitOBJ = hit.transform.gameObject;
+                 Debug.DrawLine(ray.origin, hit.point ,Color.red,1);
+                if(hitOBJ.GetComponent<enablePhysics>())
+                {
+                    hitOBJ.GetComponent<enablePhysics>().EnableHit();
+                }
+                else if(hitOBJ.GetComponent<Destruction>())
+                {
+                    hitOBJ.GetComponent<Destruction>().OnHit();
+                }
+
                 ReactiveTarget target = hitOBJ.GetComponent<ReactiveTarget>();
                 if (target != null)
                 {
@@ -39,7 +50,7 @@ public class RaycastShooter : MonoBehaviour {
                 }
                 else
                 {
-                    StartCoroutine(SphereIndicator(hit.point));
+                  // StartCoroutine(SphereIndicator(hit.point));
                     Debug.Log("Hit " + hit.point);
                 }
             }
@@ -51,6 +62,7 @@ public class RaycastShooter : MonoBehaviour {
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = pos;
+        sphere.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
 
         yield return new WaitForSeconds(1);
         Destroy(sphere);

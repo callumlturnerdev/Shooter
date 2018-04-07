@@ -51,19 +51,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ClimbingSystem.cs" />
-     <Compile Include="Assets\FPSInput.cs" />
-     <Compile Include="Assets\mouseLook.cs" />
-     <Compile Include="Assets\PlayerCharacter.cs" />
+     <Compile Include="Assets\Drone.cs" />
+     <Compile Include="Assets\DroneSpawner.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-     <Compile Include="Assets\RaycastShooter.cs" />
-     <Compile Include="Assets\ReactiveTarget.cs" />
-     <Compile Include="Assets\WanderingAI.cs" />
+     <Compile Include="Assets\Scripts\BreakableMesh.cs" />
+     <Compile Include="Assets\Scripts\ClimbingSystem.cs" />
+     <Compile Include="Assets\Scripts\Destruction.cs" />
+     <Compile Include="Assets\Scripts\enablePhysics.cs" />
+     <Compile Include="Assets\Scripts\FPSInput.cs" />
+     <Compile Include="Assets\Scripts\mouseLook.cs" />
+     <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
+     <Compile Include="Assets\Scripts\RaycastShooter.cs" />
+     <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
+     <Compile Include="Assets\Scripts\WanderingAI.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
@@ -153,22 +158,22 @@
  <HintPath>E:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
  </Reference>
  <Reference Include="pb_Stl">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
  </Reference>
  <Reference Include="Poly2Tri">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderEditor-Unity5">
- <HintPath>E:/_DEV/_UNITY/FirstPersonProject/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+ <HintPath>E:/_DEV/_UNITY/Shooter/Shooter/FirstPersonProject/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Callum/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
